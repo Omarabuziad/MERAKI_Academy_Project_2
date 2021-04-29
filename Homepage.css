@@ -1,7 +1,7 @@
 #bg1{
-    background-image: url("./3.jpg") ;
+    background-image: url("./p1.jpeg") ;
    
-    background-color: #cccccc;
+    
     height: 650px;
     
     background-position: center;
@@ -10,163 +10,110 @@
     position: relative;
     
     
-}
-.fas{
-    padding: 5px;
+    
 }
 
-#icons{
+#bg1header{
     position: absolute;
-    left:550px;
-    top:580px;
-  
-    width: 700px;
+    width: 800px;
+    height:300px;
+    
+    left: 230px;
+    top: 130px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
 
-
+#bg1h1{
+    color: white;
+    font-size: 1cm;
+    font-weight: bolder;
 
 }
 
+#bg1h2{
+    color: white;
+    font-size: 0.5cm;
+    font-weight: bolder;
+    padding: 10px;
+
+}
+
+#bg1par{
+    padding: 10px;
+}
+
+#bg1p1{
+    color: white;
+}
 
 #form-box{
     position: absolute;
-    height: 500px;
-    width: 400px;
     
-    top: 65px;
-    left: 25px;
-    
-    border: 2px solid rgba(10, 10, 10, 0.5);
-    box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.3);       
-    
-}
-
-#fo1{
-    position: absolute;
-    top: 50px;
-    left: 50px ;
-    width: 300px;
-    height:20px;
-    
-    
-
-}
-
-#fo1 #la1{
-    font-size: 0.7cm;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(5, 5, 5);
-  
-}
-
-#inp1{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px solid rgb(68, 68, 68);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    background-color: #b3b1b1;
-}
-
-#w1{
-    position: absolute;
-    left: 500px;
-}
-
-
-
-#fo2{
-    position: absolute;
-    top: 160px;
-    left: 50px ;
-    width: 300px;
-    height:20px;
-       
-}
-
-
-#fo2 #la2{
-    font-size: 0.7cm;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(5, 5, 5);
-    
-  
-}
-
-
-.custom-select {
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-}
-
-  
-select{
-    background-color: rgb(124, 125, 126);
-    width: 150px;
-    height: 30px;
-    
-}
-
-#b1{
-    position: absolute;
-    top:275px;
-    left: 50px;
-    background-color: #7c7c7c; /* Green */
-  border: 2px solid rgb(61, 61, 61);
-  color: rgb(17, 17, 17);
-  padding: 10px 27px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-
-}
-
-#b1 {
-    transition-duration: 0.4s;
-}
-  
-#b1:hover {
-    background-color: #e6e7e6; /* Green */
-    color: rgb(0, 0, 0);
+    width: 600px;
+    height: 40px;
+    left: 350px;
+    top: 420px;
 }
 
 #bankicon{
-    position: absolute;
-    background-image: url('./icon2.png');
-    width: 100px;
-    height: 100px;
-    left: 1050px;
-    top: 250px;
+    background-image: url("./icon2.png");
+    color: white;
+    width: 60px;
+    height: 60px;
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-}
-
-
-#he1{
     position: absolute;
-    left: 600px;
-    top: 200px;
-    color: black;
-    font-family: 'Montserrat', sans-serif;
+    left: 765px;
+    top:175px;
     
-    font-weight: bolder;
-    background-color:  rgba(212, 212, 212, 0.4);
+
 }
 
-#he2{
-    position: absolute;
-    left: 600px;
-    top:250px;
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    
-    font-weight: bolder;
-    background-color:  rgba(212, 212, 212, 0.4);
+#b1{
+    background-color: #4e4e4e; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
+
+#bg1sel1{
+    padding: 3px 10px;
+
+}
+#inp1{
+    padding: 1.8px 10px;
+
+}
+
+#b1{
+    transition-duration: 0.4s;
+}
+
+  
+#b1:hover {
+    background-color: #ebebeb; /* Green */
+    color: rgb(80, 80, 80);
+}
+
+#bg1soc{
+    position: absolute;
+    left: 1000px;
+    top: 550px;
+}
+
+.ic{
+    padding: 10px;
+}
+
+
+
+
 
 
 

@@ -23,46 +23,55 @@
 
 <body >
    <div id = "bg1">
-    <div id = "icons">
-    <i class='fas fa-chart-pie' style='font-size:48px;color:rgb(5, 5, 5)'></i>
-    <i class='fas fa-coins' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-credit-card' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-hand-holding-usd' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-money-bill-wave' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-wallet' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-funnel-dollar' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-poll' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-balance-scale-left' style='font-size:48px;color:rgb(0, 0, 0)'></i>
-    <i class='fas fa-comment-dollar' style='font-size:48px;color:black'></i>
-   </div>
-    <div id = "bankicon"></div>
-    <h1 id = "he1">Let's Track Your Expenses</h1>
-    <h2 id = "he2" >Saving You From Bankruptcy</h2>
 
-    
+
+
 
 
    
 
+    <div id="bg1soc">
+    <i class="fab fa-facebook-square ic" style='font-size:40px;color:black'></i>
+    <i class="fab fa-instagram-square ic" style='font-size:40px;color:black'></i>
+    <i class="fab fa-twitter-square ic" style='font-size:40px;color:black'></i>
+
+    </div>
+
+    <div id = "bankicon" style='color:rgb(255, 255, 255);'></div>
+
+    <div id = "bg1header">
+    <h1 id = "bg1h1">Let's Track Your Expenses!</h1>
+    <h4 id = "bg1h2" >Saving You From Bankruptcy</h4>
+    <div id = "bg1par">
+    <p id = "bg1p1" >This website allows you to track your expenses and save your money.
+      <br>our goal is to help those of you who can't manage thier own money and teach them how
+      <br>
+      to sock away some of that money!
+    </p>
+    </div>
+    </div>
+
+    
+
     <div id = "form-box">
 
-        <form id = "fo1">
-            <label id ="la1" for="fname">Name</label>
-            <input id="inp1" type="text" id="fname" name="fname">
-        </form>
+       
+         
+     <input style="display: inline;"  id="inp1" type="text" placeholder="Name" id="fname" name="fname">
+        
 
 
 
-        <form id = "fo2">
-            <label id ="la2" >Currency</label>
-         <div class="custom-select" style="width:200px;">
-            <select>
+        
+         
+         <div style="display: inline;" class="custom-select" style="width:200px;">
+            <select id="bg1sel1">
               <option  value="0">Select Currency:</option>
               <option value="1">JD</option>
               <option value="2">AED</option>
             </select>
           </div>
-        </form>
+       
 
 
         <button id ="b1">Track Your Budget</button>
