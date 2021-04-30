@@ -1,61 +1,46 @@
-#bg1{
+/* page 1  */
+#pg1{
     background-image: url("./p1.jpeg") ;
-   
-    
     height: 650px;
-    
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-    position: relative;
-    
-    
-    
+    position: relative; 
+    display: none;
 }
-
 #bg1header{
     position: absolute;
     width: 800px;
     height:300px;
-    
     left: 230px;
-    top: 130px;
+    top: 150px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
-
 #bg1h1{
     color: white;
     font-size: 1cm;
     font-weight: bolder;
-
 }
-
 #bg1h2{
     color: white;
     font-size: 0.5cm;
     font-weight: bolder;
     padding: 10px;
-
 }
-
 #bg1par{
     padding: 10px;
 }
-
 #bg1p1{
     color: white;
 }
-
 #form-box{
-    position: absolute;
-    
+    position: absolute; 
     width: 600px;
     height: 40px;
     left: 350px;
-    top: 420px;
+    top: 400px;
 }
-
 #bankicon{
     background-image: url("./icon2.png");
     color: white;
@@ -66,11 +51,8 @@
     background-size:cover;
     position: absolute;
     left: 765px;
-    top:175px;
-    
-
+    top:200px;
 }
-
 #b1{
     background-color: #4e4e4e; /* Green */
     border: none;
@@ -81,35 +63,150 @@
     display: inline-block;
     font-size: 16px;
 }
-
 #bg1sel1{
     padding: 3px 10px;
-
 }
 #inp1{
     padding: 1.8px 10px;
-
 }
-
 #b1{
     transition-duration: 0.4s;
-}
-
-  
+} 
 #b1:hover {
     background-color: #ebebeb; /* Green */
     color: rgb(80, 80, 80);
 }
-
 #bg1soc{
     position: absolute;
     left: 1000px;
     top: 550px;
 }
-
 .ic{
     padding: 10px;
 }
+
+/* page 2 */ 
+
+#pg2{
+    background-image: url("./imageedit_2_7174715077.jpg") ;
+    height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative; 
+    
+}
+
+
+#pg2header{
+
+    position: absolute;
+    
+    height: 290px;
+    width: 1266px;
+}
+
+#pg2D1{
+
+    position: absolute;
+    background-color: rgb(224, 222, 222);
+    top: 290px;
+    height: 360px;
+    width: 1266px;
+    border-top: 5px solid rgb(163, 163, 163);
+}
+
+
+#pg2name{
+    position: absolute;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    top: 50px;
+    left: 30px;
+    color: white;
+
+}
+
+
+.budget {
+    position: absolute;
+    width: 350px;
+    top: 25px;
+    left: 450px;
+    height: 250px;
+    color: #fff;
+   
+}
+
+.budget__title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.budget__value {
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget__income,
+.budget__expenses {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.budget__income {
+    margin-bottom: 12px;
+    background-color: #28B9B5;
+}
+
+.budget__expenses {
+    background-color: #FF5049;
+}
+
+.budget__income--text,
+.budget__expenses--text {
+    float: left;
+    font-size: 13px;
+    color: #444;
+    margin-top: 2px;
+}
+
+.budget__income--value,
+.budget__expenses--value {
+    letter-spacing: 1px;
+    float:right;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
