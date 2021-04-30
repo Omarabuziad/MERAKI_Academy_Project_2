@@ -431,6 +431,7 @@
     border:2px solid rgb(70, 70, 70);
     display: flex ;
     flex-direction: column;
+    z-index: 8 ;
     
 }
 
@@ -438,6 +439,7 @@
    
     height: 300px;
     position: absolute;
+    z-index: 8;
 }
 
 #sidebar1{
@@ -475,10 +477,93 @@
 
 
 
+/* page 3 */ 
+
+#pg3{
+    position: absolute;
+    background-color: rgb(224, 222, 222);
+    top: 290px;
+    height: 360px;
+    width: 1266px;
+    border-top: 5px solid rgb(163, 163, 163);
+    z-index: 7 ;
+}
 
 
+#pg3income{
+    position: absolute;
+    border-right: 3px solid rgb(66, 65, 65);
+    height: 360px;
+    width: 630px;
+    
+
+}
+
+#pg3expenses{
+    position: absolute;
+   
+    height: 360px;
+    width: 630px;
+    left:630px;
 
 
+}
+
+.pg3h3inc-exp{
+    
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    color: rgb(17, 17, 17);
+    font-family: 'Montserrat' ;
+    font-weight: bold;
+    
+}
+
+.pg3h3inc-exp:hover{
+    color: rgb(112, 112, 112);
+}
+
+
+.listHeader{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pg3listdiv{
+    width: 150px;
+    height: 40px;
+    border: 2px solid black;
+    background: rgb(134, 134, 134);
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+
+}
+
+.listInform{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pg3listIn{
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+    background: rgb(134, 134, 134);
+}
+
+ul{
+    list-style-type:none;
+    color: black;
+    font-weight: bolder;
+    margin: 0;
+    padding: 5px;
+   
+}
 
 
 
