@@ -117,6 +117,141 @@
 }
 
 
+#pg2income{
+    position: absolute;
+    border-right: 3px solid rgb(66, 65, 65);
+    height: 360px;
+    width: 630px;
+
+}
+
+#pg2expenses{
+    position: absolute;
+   
+    height: 360px;
+    width: 630px;
+    left:630px;
+
+
+}
+
+.pg2h3inc-exp{
+    
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    color: rgb(17, 17, 17);
+    font-family: 'Montserrat' ;
+    font-weight: bold;
+    
+}
+
+.pg2h3inc-exp:hover{
+    color: rgb(112, 112, 112);
+}
+
+
+
+#incomeIconOrder{
+    position: absolute;
+    width: 480px;
+    height: 180px;
+   
+    left: 75px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.income-icon{
+    width: 100px;
+    height:100px;
+    padding: 30px;
+    position: relative;
+    color: black;
+}
+
+.income-icon:hover{
+    color: rgb(64, 65, 65);
+}
+
+
+
+#l-buss{
+    position: absolute;
+    left: 17px;
+}
+#l-sal{
+    position: absolute;
+    left: 25px;
+}
+
+#l-heal{
+    position: absolute;
+    left: 23px;
+}
+
+#expensesIconOrder{
+    position: absolute;
+    width: 480px;
+    height: 200px;
+   
+    left: 110px;
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px 75px ;
+    grid-template-rows: 75px 75px 75px 75px 75px;
+    gap: 20px;
+    
+    
+
+   
+}
+
+.expenses-icon{
+    width: 100px;
+    height:100px;
+    padding: 30px;
+   position: relative;
+   color: black;
+    
+}
+
+.expenses-icon:hover{
+  color: rgb(99, 100, 100);
+}
+
+
+.iconText{
+    position: absolute;
+    left: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #pg2name{
     position: absolute;
     font-family: 'Montserrat';
