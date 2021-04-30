@@ -73,6 +73,33 @@
 
   <div id = "pg2">
 
+    <div id = "box-amount" style="display: none;">
+      <div id="categ">
+        <h2 id="categh2">Resturant</h2>
+        <i onclick="closShowValueBox()"  type=button id="Xicon" class="fas fa-times" style='font-size:25px;color:rgb(255, 255, 255)'></i>
+      </div>
+
+      <div id="box-input">
+        <input id="valueinput" type = number  placeholder="Value">
+        <div id="curr" style="display: inline-block;">AED</div>
+      </div>
+
+      <div id="box-date">
+        <input id="dateinput" type = date  placeholder="date">
+      </div>
+
+      <div id="box-note">
+      <input id="noteinput" type=string  placeholder="Note">
+      </div>
+
+      <i onclick="addValue()" id="yesicon" class="fas fa-check-square" ></i>
+
+    </div>
+
+
+
+
+
     <div id = "pg2header">
 
       <i onclick="sideBarShow()"  type ='button' class="fas fa-bars" style='font-size:35px;color:rgb(218, 216, 216)'></i>
@@ -93,28 +120,40 @@
         
         <div class="budget__expenses clearfix">
             <div class="budget__expenses--text">Expenses</div>
-            <div class="budget__expenses--value">- 1,954.36</div>
+            <div id="expenvalue" class="budget__expenses--value">- 0</div>
         </div>
 
     </div>
-    </div>
+    
 
 
 
     <div id = "pg2D1">
 
-      <div id = "sidebar" style="display: none;">
-        <div id = "sidebar1">Categories</div>
-        <div id = "sidebar2">Transactions</div>
-      </div>
+      
+
+
+
+
+      
 
       <div id = "pg2income">
+
+        <div id='sideDiv'>
+
+        <div id = "sidebar" style="display: none;" >
+          <div id = "sidebar1">Categories</div>
+          <div id = "sidebar2">Transactions</div>
+        </div>
+
+       </div>
+
         <h3 class="pg2h3inc-exp" >INCOME</h3>
 
         <div id = "incomeIconOrder">
 
           <div class="income-icon">
-           <i class="fas fa-wallet" style='font-size:35px;text-align:center;'></i>
+           <i  class="fas fa-wallet" style='font-size:35px;text-align:center;'></i>
            <label id='l-sal' style="display: block;font-weight: bold;">Salary</label>
           </div>
 
@@ -138,7 +177,7 @@
            <label class="iconText" style="display: block;font-weight: bold;">Groceries</label>
           </div>
 
-          <div class="expenses-icon">
+          <div onclick="showValueBox()" class="expenses-icon">
             <i class="fas fa-utensils" style='font-size:35px;'></i>
             <label class="iconText"  style="display: block;font-weight: bold;" >Resturant</label>
           </div>

@@ -98,6 +98,123 @@
 }
 
 
+#box-amount{
+    position: absolute;
+    background-color: rgb(194, 196, 192);
+    border: 3px solid black;
+    box-shadow: 2px 1px #444444;
+    width: 300px;
+    height: 300px;
+    left: 475px;
+    z-index: 2;
+    top:230px;
+
+}
+
+#Xicon{
+    z-index: 4;
+    position: absolute;
+    left: 267px;
+    top: 4px;
+}
+
+#yesicon{
+    z-index: 4;
+    position: absolute;
+    top:255px;
+    left:131px;
+    color: black; 
+    font-size: 35px;
+}
+
+#yesicon:hover{
+    color: rgb(82, 81, 81); 
+    font-size: 34px;
+    
+}
+
+#categ{
+    background-color: rgb(160, 158, 158);
+    position: absolute;
+    width: 293px ;
+    height: 100px ;
+    margin-top: 1px;
+    border: 2px solid black;
+}
+
+#categh2{
+    text-align: center;
+    padding: 25px;
+    color: rgb(20, 20, 20);
+    font-family: 'Montserrat';
+    font-weight: bold;
+
+}
+
+#box-input{
+    background-color: rgb(160, 158, 158);
+    position: absolute;
+    width: 293px ;
+    height: 50px ;
+    top:100px;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+#valueinput{
+    padding: 9.1px 25px;
+    border: 2px solid black;
+    color: black;
+}
+#curr{
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(19, 19, 19);
+    padding-top: 5px;
+}
+#box-date{
+    background-color: rgb(83, 82, 82);
+    position: absolute;
+    width: 293px ;
+    height: 50px ;
+    top:150px;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+
+#dateinput{
+    padding: 9.4px 60px;
+    border: 2px solid black;
+    color: black;
+}
+
+#noteinput{
+    padding: 9.2px 54px;
+    border: 2px solid black;
+    color: black;
+    
+    position: absolute;
+}
+
+#box-note{
+    background-color: rgb(83, 82, 82);
+    position: absolute;
+    width: 293px ;
+    height: 50px ;
+    top:200px;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
 #pg2header{
 
     position: absolute;
@@ -122,6 +239,7 @@
     border-right: 3px solid rgb(66, 65, 65);
     height: 360px;
     width: 630px;
+    
 
 }
 
@@ -156,11 +274,11 @@
     position: absolute;
     width: 480px;
     height: 180px;
-   
     left: 75px;
     display: flex;
     gap: 20px;
     justify-content: center;
+    
 }
 
 
@@ -170,6 +288,7 @@
     padding: 30px;
     position: relative;
     color: black;
+    cursor: pointer;
 }
 
 .income-icon:hover{
@@ -214,6 +333,7 @@
     padding: 30px;
    position: relative;
    color: black;
+   cursor: pointer;
     
 }
 
@@ -226,27 +346,6 @@
     position: absolute;
     left: 16px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -330,9 +429,15 @@
     width: 150px;
     height: 100px;
     border:2px solid rgb(70, 70, 70);
-    display: flex;
+    display: flex ;
     flex-direction: column;
     
+}
+
+#sideDiv{
+   
+    height: 300px;
+    position: absolute;
 }
 
 #sidebar1{
