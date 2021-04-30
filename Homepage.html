@@ -27,7 +27,8 @@
 </head>
 
 <body >
-   <div id = "pg1">
+  <div id = "main">
+   <div id = "pg1" >
 
     <div id="bg1soc">
     <i type = 'button' class="fab fa-facebook-square ic" style='font-size:40px;color:black'></i>
@@ -58,30 +59,30 @@
      <div style="display: inline;" class="custom-select" style="width:200px;">
        <select id="bg1sel1">
          <option  value="0">Select Currency:</option>
-         <option value="1">JD</option>
-         <option value="2">AED</option>
+         <option value="JD">JD</option>
+         <option value="AED">AED</option>
          </select>
       </div>
        
 
 
-     <button id ="b1">Track Your Budget</button>
+     <button onclick="pageOne()" id ="b1">Track Your Budget</button>
 
     </div>
-  </div>
+   </div>
 
 
-  <div id = "pg2">
+   <div id = "pg2">
 
     <div id = "box-amount" style="display: none;">
       <div id="categ">
-        <h2 id="categh2">Resturant</h2>
-        <i onclick="closShowValueBox()"  type=button id="Xicon" class="fas fa-times" style='font-size:25px;color:rgb(255, 255, 255)'></i>
+        <h2 id="categh2"></h2>
+        <i onclick="closShowValueBoxExp()"  type=button id="Xicon" class="fas fa-times" style='font-size:25px;color:rgb(255, 255, 255)'></i>
       </div>
 
       <div id="box-input">
         <input id="valueinput" type = number  placeholder="Value">
-        <div id="curr" style="display: inline-block;">AED</div>
+        <div id="curr" style="display: inline-block;"></div>
       </div>
 
       <div id="box-date">
@@ -92,9 +93,39 @@
       <input id="noteinput" type=string  placeholder="Note">
       </div>
 
-      <i onclick="addValue()" id="yesicon" class="fas fa-check-square" ></i>
+      <i onclick="addValue(); addToExpList();" id="yesicon" class="fas fa-check-square" ></i>
 
     </div>
+
+
+    <div id = "box-amountInc" style="display: none;">
+      <div id="categInc">
+        <h2 id="categh2Inc"></h2>
+        <i onclick="closShowValueBoxInc()"  type=button id="XiconInc" class="fas fa-times" style='font-size:25px;color:rgb(255, 255, 255)'></i>
+      </div>
+
+      <div id="box-inputInc">
+        <input id="valueinputInc" type = number  placeholder="Value">
+        <div id="currInc" style="display: inline-block;"></div>
+      </div>
+
+      <div id="box-dateInc">
+        <input id="dateinputInc" type = date  placeholder="date">
+      </div>
+
+      <div id="box-noteInc">
+      <input id="noteinputInc" type=string  placeholder="Note">
+      </div>
+
+      <i onclick="addIncomeValue(); addToIncomeList();" id="yesiconInc" class="fas fa-check-square" ></i>
+
+    </div>
+
+
+
+
+
+
 
 
 
@@ -104,18 +135,18 @@
 
       <i onclick="sideBarShow()"  type ='button' class="fas fa-bars" style='font-size:35px;color:rgb(218, 216, 216)'></i>
 
-      <h2 id = "pg2name">Omar Wallet</h2>
+      <h2 id = "pg2name"></h2>
 
       <div class="budget">
         <div class="budget__title">
             Available Budget in <span class="budget__title--month"></span>:
         </div>
         
-        <div class="budget__value">+ 2,345.64</div>
+        <div  id="budget" class="budget__value">0</div>
         
         <div class="budget__income clearfix">
             <div class="budget__income--text">Income</div>
-            <div class="budget__income--value">+ 4,300.00</div>  
+            <div id="incomevalue" class="budget__income--value">+ 0</div>  
         </div>
         
         <div class="budget__expenses clearfix">
@@ -142,8 +173,8 @@
         <div id='sideDiv'>
 
         <div id = "sidebar" style="display: none;" >
-          <div id = "sidebar1">Categories</div>
-          <div id = "sidebar2">Transactions</div>
+          <div type=button onclick="moveToCategory()"  id = "sidebar1">Categories</div>
+          <div type=button onclick="moveToTransction()"     id = "sidebar2">Transactions</div>
         </div>
 
        </div>
@@ -153,12 +184,12 @@
         <div id = "incomeIconOrder">
 
           <div class="income-icon">
-           <i  class="fas fa-wallet" style='font-size:35px;text-align:center;'></i>
+           <i  onclick="showValueBoxInc()" id = "Salary"  class="fas fa-wallet" style='font-size:35px;text-align:center;'></i>
            <label id='l-sal' style="display: block;font-weight: bold;">Salary</label>
           </div>
 
           <div class="income-icon">
-            <i class="fas fa-briefcase" style='font-size:35px;'></i>
+            <i  onclick="showValueBoxInc()" id = "Business" class="fas fa-briefcase" style='font-size:35px;'></i>
             <label id='l-buss' style="display: block;font-weight: bold;" >Business</label>
           </div>
 
@@ -173,52 +204,52 @@
         <div id = "expensesIconOrder">
 
           <div class="expenses-icon">
-           <i class="fas fa-shopping-cart" style='font-size:35px;text-align:center;'></i>
+           <i onclick="showValueBoxExp()" id = "Groceries" class="fas fa-shopping-cart" style='font-size:35px;text-align:center;'></i>
            <label class="iconText" style="display: block;font-weight: bold;">Groceries</label>
           </div>
 
-          <div onclick="showValueBox()" class="expenses-icon">
-            <i class="fas fa-utensils" style='font-size:35px;'></i>
-            <label class="iconText"  style="display: block;font-weight: bold;" >Resturant</label>
+          <div  class="expenses-icon">
+            <i onclick="showValueBoxExp()" id = "Resturant" class="fas fa-utensils" style='font-size:35px;'></i>
+            <label id="labRest" class="iconText"  style="display: block;font-weight: bold;" >Resturant</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-gamepad" style='font-size:35px;'></i>
+            <i onclick="showValueBoxExp()" id = "Leisure" class="fas fa-gamepad" style='font-size:35px;'></i>
             <label  style="display: block;font-weight: bold;" >Leisure</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-bus-alt" style='font-size:35px;'></i>
+            <i onclick="showValueBoxExp()" id = "Transport" class="fas fa-bus-alt" style='font-size:35px;'></i>
             <label class="iconText"  style="display: block;font-weight: bold;" >Transport</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-gift" style='font-size:35px;'></i>
+            <i  onclick="showValueBoxExp()" id = "Gifts" class="fas fa-gift" style='font-size:35px;'></i>
             <label  style="display: block;font-weight: bold;" >Gifts</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-heartbeat" style='font-size:35px;'></i>
+            <i onclick="showValueBoxExp()" id = "Health" class="fas fa-heartbeat" style='font-size:35px;'></i>
             <label id="l-heal"  style="display: block;font-weight: bold;" >Health</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-home" style='font-size:35px;'></i>
+            <i onclick="showValueBoxExp()" id = "Family" class="fas fa-home" style='font-size:35px;'></i>
             <label  style="display: block;font-weight: bold;" >Family</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-faucet" style='font-size:35px;'></i>
+            <i onclick="showValueBoxExp()" id = "Utility" class="fas fa-faucet" style='font-size:35px;'></i>
             <label  style="display: block;font-weight: bold;" >Utility</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-shopping-bag" style='font-size:35px;'></i>
+            <i onclick="showValueBoxExp()" id = "Shopping" class="fas fa-shopping-bag" style='font-size:35px;'></i>
             <label class="iconText"  style="display: block;font-weight: bold;" >Shopping</label>
           </div>
 
           <div class="expenses-icon">
-            <i class="fas fa-mobile-alt" style='font-size:35px;'></i>
+            <i onclick="showValueBoxExp()" id = "Mobile" class="fas fa-mobile-alt" style='font-size:35px;'></i>
             <label class="iconText"  style="display: block;font-weight: bold;" >Mobile</label>
           </div>
 
@@ -230,10 +261,10 @@
 
     </div>
 
-  </div>
+   </div>
 
 
-  <div id = "pg3">
+   <div id = "pg3" style="display: none;" >
 
     <div id = "pg3income">
       <h3 class="pg3h3inc-exp" >INCOME</h3>
@@ -247,39 +278,28 @@
 
       <div class = "listInform">
         <div id="hCategory" class = "pg3listIn">
-          <ul id="luCategory">
+          <ul id="inluCategory">
             
           </ul>
 
-
-
-
         </div>
+
         <div id="hDate" class = "pg3listIn">
-          <ul id="luName">
-            <li>Coffee</li>
-           <li>Tea</li>
-            <li>Milk</li>
+          <ul id="inluDate">
+           
           </ul>
         </div>
         <div id="hValue" class = "pg3listIn">
-          <ul id="luName">
-            <li>Coffee</li>
-           <li>Tea</li>
-            <li>Milk</li>
+          <ul id="inluValue">
+            
           </ul>
         </div>
         <div id="hNote"  class = "pg3listIn">
-          <ul id="luName">
-            <li>Coffee</li>
-           <li>Tea</li>
-            <li>Milk</li>
+          <ul id="inluNote">
+            
           </ul>
         </div>
       </div>
-
-
-
 
     </div>
 
@@ -288,6 +308,46 @@
 
     <div id = "pg3expenses">
        <h3 class="pg3h3inc-exp" >EXPENSES</h3>
+
+       
+      <div class = "listHeader">
+        <div class = "pg3listdiv">Category</div>
+        <div class = "pg3listdiv">Date</div>
+        <div class = "pg3listdiv">Value</div>
+        <div class = "pg3listdiv">Note</div>
+      </div>
+
+      <div class = "listInform">
+        <div id="ehCategory" class = "pg3listIn">
+          <ul id="expluCategory">
+            
+          </ul>
+
+        </div>
+
+        <div id="ehDate" class = "pg3listIn">
+          <ul id="expluDate">
+           
+          </ul>
+        </div>
+        <div id="ehValue" class = "pg3listIn">
+          <ul id="expluValue">
+            
+          </ul>
+        </div>
+        <div id="ehNote"  class = "pg3listIn">
+          <ul id="expluNote">
+            
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+
+
     </div>
        
     
@@ -300,9 +360,9 @@
 
 
 
+   </div>
+
   </div>
-
-
 
 
  <script src="./HomePage.js"></script>

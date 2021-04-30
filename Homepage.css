@@ -1,4 +1,12 @@
 /* page 1  */
+
+#main{
+    height: 650px;
+    position: relative;
+}
+
+
+
 #pg1{
     background-image: url("./p1.jpeg") ;
     height: 650px;
@@ -6,8 +14,11 @@
     background-repeat: no-repeat;
     background-size:cover;
     position: relative; 
-    display: none;
+    z-index: 15;
+    
 }
+
+
 #bg1header{
     position: absolute;
     width: 800px;
@@ -94,6 +105,7 @@
     background-repeat: no-repeat;
     background-size:cover;
     position: relative; 
+    z-index: 1;
     
 }
 
@@ -198,6 +210,121 @@
 }
 
 #box-note{
+    background-color: rgb(83, 82, 82);
+    position: absolute;
+    width: 293px ;
+    height: 50px ;
+    top:200px;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+#box-amountInc{
+    position: absolute;
+    background-color: rgb(194, 196, 192);
+    border: 3px solid black;
+    box-shadow: 2px 1px #444444;
+    width: 300px;
+    height: 300px;
+    left: 475px;
+    z-index: 2;
+    top:230px;
+
+}
+
+#XiconInc{
+    z-index: 4;
+    position: absolute;
+    left: 267px;
+    top: 4px;
+}
+
+#yesiconInc{
+    z-index: 4;
+    position: absolute;
+    top:255px;
+    left:131px;
+    color: black; 
+    font-size: 35px;
+}
+
+#yesiconInc:hover{
+    color: rgb(82, 81, 81); 
+    font-size: 34px;
+    
+}
+
+#categInc{
+    background-color: rgb(160, 158, 158);
+    position: absolute;
+    width: 293px ;
+    height: 100px ;
+    margin-top: 1px;
+    border: 2px solid black;
+}
+
+#categh2Inc{
+    text-align: center;
+    padding: 25px;
+    color: rgb(20, 20, 20);
+    font-family: 'Montserrat';
+    font-weight: bold;
+
+}
+
+#box-inputInc{
+    background-color: rgb(160, 158, 158);
+    position: absolute;
+    width: 293px ;
+    height: 50px ;
+    top:100px;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+#valueinputInc{
+    padding: 9.1px 25px;
+    border: 2px solid black;
+    color: black;
+}
+#currInc{
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(19, 19, 19);
+    padding-top: 5px;
+}
+#box-dateInc{
+    background-color: rgb(83, 82, 82);
+    position: absolute;
+    width: 293px ;
+    height: 50px ;
+    top:150px;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+
+#dateinputInc{
+    padding: 9.4px 60px;
+    border: 2px solid black;
+    color: black;
+}
+
+#noteinputInc{
+    padding: 9.2px 54px;
+    border: 2px solid black;
+    color: black;
+    
+    position: absolute;
+}
+
+#box-noteInc{
     background-color: rgb(83, 82, 82);
     position: absolute;
     width: 293px ;
@@ -492,7 +619,7 @@
 
 #pg3income{
     position: absolute;
-    border-right: 3px solid rgb(66, 65, 65);
+    border-right: 7px solid rgb(255, 255, 255);
     height: 360px;
     width: 630px;
     
@@ -563,6 +690,18 @@ ul{
     margin: 0;
     padding: 5px;
    
+}
+
+.delbot{
+    background-color: #c5ccc6; /* Green */
+  border: none;
+  color: rgb(3, 3, 3);
+  padding: 3px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bolder;
 }
 
 
