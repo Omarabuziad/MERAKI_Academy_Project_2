@@ -106,7 +106,7 @@ function availableBudget(){
     $('#budget').html(availableBudget1)
     if(availableBudget1 < 0 ) {
         sound2()
-        alert("Careful from bankrupt , you exceed the limit")
+        alert("Careful from bankrupt , you exceed the limits")
         setTimeout(function(){ sound3() }, 1750);
 
     }
