@@ -393,7 +393,15 @@
     
 }
 
+#pg2expo{
+    color: rgb(204, 7, 7);
 
+
+}
+#pg2expo:hover{
+    color: rgb(250, 68, 68);
+    
+}
 
 #pg2inco{
     color: rgb(1, 165, 1);
@@ -401,7 +409,7 @@
 
 }
 #pg2inco:hover{
-    color: rgb(65, 245, 65);
+    color: rgb(47, 252, 47);
     
 }
 
