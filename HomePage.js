@@ -115,8 +115,8 @@ const renderIncomeList = function() {
         li.innerText = inCategory[i]
         inulCategory.append(li)
 
-        let cB = document.createElement("button")
-        cB.innerText = 'X'
+        const cB = $(`<button>X</buttom>`)
+        
         cB.style.display = "inline-block"
         cB.className = "delbot"
         cB.onclick = function() { deleteIncomeInformation(i) };
