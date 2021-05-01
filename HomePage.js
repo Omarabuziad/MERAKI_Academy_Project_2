@@ -1,7 +1,7 @@
 function pageOne(){
     
-    document.querySelector('#curr').textContent = document.querySelector('#bg1sel1').value
-    document.querySelector('#currInc').textContent = document.querySelector('#bg1sel1').value
+    $('#curr').text($('#bg1sel1').val())
+    $('#currInc').text($('#bg1sel1').val())
     document.querySelector("#pg2name").innerHTML = document.querySelector('#inp1').value + ' Wallet'
     document.querySelector('#pg1').style.display = 'none'
     document.querySelector('#pg2').style.display = ''
