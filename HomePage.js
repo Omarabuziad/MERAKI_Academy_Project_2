@@ -105,7 +105,7 @@ function availableBudget(){
     availableBudget1 = incomeValue - expenValue
     $('#budget').html(availableBudget1)
     if(availableBudget1 < 0 ) {
-        sound1()
+        sound2()
         alert("Careful from bankrupt , you exceed the limit")
     }
 }
@@ -329,6 +329,6 @@ const deleteExpInformation = function(i) {
 
 
 
-function sound1() {
+function sound2() {
     sound.play()
 }
