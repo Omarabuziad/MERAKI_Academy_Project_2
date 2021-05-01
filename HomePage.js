@@ -1,7 +1,7 @@
 function pageOne(){ 
  $('#curr').text($('#bg1sel1').val())
  $('#currInc').text($('#bg1sel1').val())
- $("#pg2name").html($('#inp1').val() + ' Wallet')
+ $("#pg2name").html($('#inp1').val()+"'s" + ' Wallet')
  $('#pg1').hide()
  $('#pg2').show() 
 }
@@ -104,10 +104,10 @@ const inCategory = []
 const inDate = []
 const inValue = []
 const inNote = []
-const inulCategory = $("#inluCategory")
-const inulDate = $("#inluDate")
-const inulValue = $("#inluValue")
-const inulNote = $("#inluNote")
+const inulCategory = document.querySelector("#inluCategory")
+const inulDate = document.querySelector("#inluDate")
+const inulValue = document.querySelector("#inluValue")
+const inulNote = document.querySelector("#inluNote")
 
 const renderIncomeList = function() {
     for (let i = 0; i < inCategory.length; i++) {
@@ -115,34 +115,34 @@ const renderIncomeList = function() {
         li.innerText = inCategory[i]
         inulCategory.append(li)
 
-        const cB = $(`<button>X</buttom>`)
-        
+        let cB = document.createElement("button")
+        cB.innerText = 'X'
         cB.style.display = "inline-block"
         cB.className = "delbot"
         cB.onclick = function() { deleteIncomeInformation(i) };
         li.append(cB) 
     }
     
+    
 
 
     for (let i = 0; i < inDate.length; i++) {
-        let li = $("<li></li>")
-        li.html(inDate[i])
+        let li = document.createElement("li")
+        li.innerText = inDate[i]
         inulDate.append(li)
 
     }
 
     for (let i = 0; i < inValue.length; i++) {
-        let li = $("<li></li>")
-        li.html(inValue[i])
+        let li = document.createElement("li")
+        li.innerText = inValue[i]
         inulValue.append(li)
-
         
     }
 
     for (let i = 0; i < inNote.length; i++) {
-        let li = $("<li></li>")
-        li.html(inNote[i])
+        let li = document.createElement("li")
+        li.innerText = inNote[i]
         inulNote.append(li)
 
        
@@ -151,6 +151,7 @@ const renderIncomeList = function() {
 }
 
 const addToIncomeList = function() {
+    
 
     let cat = u.id
     let date = document.querySelector('#dateinputInc').value
@@ -193,8 +194,8 @@ const deleteIncomeInformation = function(i) {
    inulValue.innerHTML = ''
    inulNote.innerHTML = ''
 
-   
 
+   
    renderIncomeList()
 }
 
@@ -251,6 +252,7 @@ const renderExpList = function() {
 }
 
 const addToExpList = function() {
+    
 
     let cat = j.id
     let date = document.querySelector('#dateinput').value
