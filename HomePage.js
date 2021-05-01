@@ -1,7 +1,7 @@
 function pageOne(){ 
  $('#curr').text($('#bg1sel1').val())
  $('#currInc').text($('#bg1sel1').val())
- $("#pg2name").html($('#inp1').val() + ' Waller')
+ $("#pg2name").html($('#inp1').val() + ' Wallet')
  $('#pg1').hide()
  $('#pg2').show() 
 }
@@ -100,14 +100,14 @@ function availableBudget(){
 
 
 
-let inCategory = []
-let inDate = []
-let inValue = []
-let inNote = []
-const inulCategory = document.querySelector("#inluCategory")
-const inulDate = document.querySelector("#inluDate")
-const inulValue = document.querySelector("#inluValue")
-const inulNote = document.querySelector("#inluNote")
+const inCategory = []
+const inDate = []
+const inValue = []
+const inNote = []
+const inulCategory = $("#inluCategory")
+const inulDate = $("#inluDate")
+const inulValue = $("#inluValue")
+const inulNote = $("#inluNote")
 
 const renderIncomeList = function() {
     for (let i = 0; i < inCategory.length; i++) {
@@ -122,26 +122,27 @@ const renderIncomeList = function() {
         cB.onclick = function() { deleteIncomeInformation(i) };
         li.append(cB) 
     }
+    
 
 
     for (let i = 0; i < inDate.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = inDate[i]
+        let li = $("<li></li>")
+        li.html(inDate[i])
         inulDate.append(li)
 
     }
 
     for (let i = 0; i < inValue.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = inValue[i]
+        let li = $("<li></li>")
+        li.html(inValue[i])
         inulValue.append(li)
 
         
     }
 
     for (let i = 0; i < inNote.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = inNote[i]
+        let li = $("<li></li>")
+        li.html(inNote[i])
         inulNote.append(li)
 
        
