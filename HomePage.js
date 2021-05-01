@@ -3,15 +3,11 @@ function pageOne(){
     document.querySelector('#curr').textContent = document.querySelector('#bg1sel1').value
     document.querySelector('#currInc').textContent = document.querySelector('#bg1sel1').value
     document.querySelector("#pg2name").innerHTML = document.querySelector('#inp1').value + ' Wallet'
-    
+    document.querySelector('#pg1').style.display = 'none'
+    document.querySelector('#pg2').style.display = ''
     
 }
 
-now = new Date();
-
-months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-month = now.getMonth();
-year = now.getFullYear();
 
 
 

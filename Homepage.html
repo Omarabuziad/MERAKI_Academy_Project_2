@@ -1,375 +1,455 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Homepage.css" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"  href="./Homepage.css"  />
-  <title>Home Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://css.gg/add-r.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/solid.css"
+      integrity="sha384-LA8Ug4T/nhVkyhrSmSirsoAo9iDrBk8E7U80aSPeD+w3vO8PzOJIS6agGcbIwwX0"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/regular.css"
+      integrity="sha384-Dn9L7vwedvmbdep+J8U5Zbrp+ES46dt8pm8ZMUu9iOR9isC4+Y/KP1h4StrDd/F+"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/brands.css"
+      integrity="sha384-V5Z1KgRRJyY878qCx7+zUeTDm0FgjoYrbmSortFqRPGz+Ue6XDe4uIiMqB3tB/wd"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/fontawesome.css"
+      integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+   <div id = "main">
+    <!--page one -->
+    <div id="pg1">
+
+      <div id="bg1soc">
+        <i
+          type="button"
+          class="fab fa-facebook-square ic"
+          style="font-size: 40px; color: black"
+        ></i>
+        <i
+          type="button"
+          class="fab fa-instagram-square ic"
+          style="font-size: 40px; color: black"
+        ></i>
+        <i
+          type="button"
+          class="fab fa-twitter-square ic"
+          style="font-size: 40px; color: black"
+        ></i>
+      </div>
+
+      <div id="bankicon" style="color: rgb(255, 255, 255)"></div>
+
+      <div id="bg1header">
+        <h1 id="bg1h1">Let's Track Your Expenses!</h1>
+        <h4 id="bg1h2">Saving You From Bankruptcy</h4>
+        <div id="bg1par">
+          <p id="bg1p1">
+            This website allows you to track your expenses and save your money.
+            <br />our goal is to help those of you who can't manage thier own
+            money and teach them how
+            <br />
+            to sock away some of that money!
+          </p>
+        </div>
+      </div>
+
+      <div id="form-box">
+        <input
+          style="display: inline"
+          id="inp1"
+          type="text"
+          placeholder="Name"
+          id="fname"
+          name="fname"
+        />
+
+        <div style="display: inline" class="custom-select" style="width: 200px">
+          <select id="bg1sel1">
+            <option value="0">Select Currency:</option>
+            <option value="JD">JD</option>
+            <option value="AED">AED</option>
+          </select>
+        </div>
+
+        <button onclick="pageOne()" id="b1">Track Your Budget</button>
+      </div>
+    </div>
+    <!--page one -->
+
   
-  <link href='https://css.gg/add-r.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/solid.css" integrity="sha384-LA8Ug4T/nhVkyhrSmSirsoAo9iDrBk8E7U80aSPeD+w3vO8PzOJIS6agGcbIwwX0" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/regular.css" integrity="sha384-Dn9L7vwedvmbdep+J8U5Zbrp+ES46dt8pm8ZMUu9iOR9isC4+Y/KP1h4StrDd/F+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/brands.css" integrity="sha384-V5Z1KgRRJyY878qCx7+zUeTDm0FgjoYrbmSortFqRPGz+Ue6XDe4uIiMqB3tB/wd" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/fontawesome.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-  
-  
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  
 
 
+    <!--page two -->
+    <div id="pg2" style="display: none;">
 
 
+      <div id="box-amount" style="display: none">
+        <div id="categ">
+          <h2 id="categh2"></h2>
+          <i
+            onclick="closShowValueBoxExp()"
+            type="button"
+            id="Xicon"
+            class="fas fa-times"
+            style="font-size: 25px; color: rgb(255, 255, 255)"
+          ></i>
+        </div>
 
-</head>
+        <div id="box-input">
+          <input id="valueinput" type="number" placeholder="Value" />
+          <div id="curr" style="display: inline-block"></div>
+        </div>
 
-<body >
-  <div id = "main">
-   <div id = "pg1" >
+        <div id="box-date">
+          <input id="dateinput" type="date" placeholder="date" />
+        </div>
 
-    <div id="bg1soc">
-    <i type = 'button' class="fab fa-facebook-square ic" style='font-size:40px;color:black'></i>
-    <i type = 'button' class="fab fa-instagram-square ic" style='font-size:40px;color:black'></i>
-    <i type = 'button' class="fab fa-twitter-square ic" style='font-size:40px;color:black'></i>
-    </div>
+        <div id="box-note">
+          <input id="noteinput" type="string" placeholder="Note" />
+        </div>
 
-    <div id = "bankicon" style='color:rgb(255, 255, 255);'></div>
-
-    <div id = "bg1header">
-
-    <h1 id = "bg1h1">Let's Track Your Expenses!</h1>
-    <h4 id = "bg1h2" >Saving You From Bankruptcy</h4>
-    <div id = "bg1par">
-    <p id = "bg1p1" >This website allows you to track your expenses and save your money.
-      <br>our goal is to help those of you who can't manage thier own money and teach them how
-      <br>
-      to sock away some of that money!
-    </p>
-    </div>
-
-    </div>
-
-    <div id = "form-box">
-
-     <input style="display: inline;"  id="inp1" type="text" placeholder="Name" id="fname" name="fname">
-  
-     <div style="display: inline;" class="custom-select" style="width:200px;">
-       <select id="bg1sel1">
-         <option  value="0">Select Currency:</option>
-         <option value="JD">JD</option>
-         <option value="AED">AED</option>
-         </select>
-      </div>
-       
-
-
-     <button onclick="pageOne()" id ="b1">Track Your Budget</button>
-
-    </div>
-   </div>
-
-
-   <div id = "pg2">
-
-    <div id = "box-amount" style="display: none;">
-      <div id="categ">
-        <h2 id="categh2"></h2>
-        <i onclick="closShowValueBoxExp()"  type=button id="Xicon" class="fas fa-times" style='font-size:25px;color:rgb(255, 255, 255)'></i>
+        <i
+          onclick="addValue(); addToExpList();"
+          id="yesicon"
+          class="fas fa-check-square"
+        ></i>
       </div>
 
-      <div id="box-input">
-        <input id="valueinput" type = number  placeholder="Value">
-        <div id="curr" style="display: inline-block;"></div>
+
+
+      <div id="box-amountInc" style="display: none">
+        <div id="categInc">
+          <h2 id="categh2Inc"></h2>
+          <i
+            onclick="closShowValueBoxInc()"
+            type="button"
+            id="XiconInc"
+            class="fas fa-times"
+            style="font-size: 25px; color: rgb(255, 255, 255)"
+          ></i>
+        </div>
+
+        <div id="box-inputInc">
+          <input id="valueinputInc" type="number" placeholder="Value" />
+          <div id="currInc" style="display: inline-block"></div>
+        </div>
+
+        <div id="box-dateInc">
+          <input id="dateinputInc" type="date" placeholder="date" />
+        </div>
+
+        <div id="box-noteInc">
+          <input id="noteinputInc" type="string" placeholder="Note" />
+        </div>
+
+        <i
+          onclick="addIncomeValue(); addToIncomeList();"
+          id="yesiconInc"
+          class="fas fa-check-square"
+        ></i>
       </div>
 
-      <div id="box-date">
-        <input id="dateinput" type = date  placeholder="date">
-      </div>
-
-      <div id="box-note">
-      <input id="noteinput" type=string  placeholder="Note">
-      </div>
-
-      <i onclick="addValue(); addToExpList();" id="yesicon" class="fas fa-check-square" ></i>
-
-    </div>
 
 
-    <div id = "box-amountInc" style="display: none;">
-      <div id="categInc">
-        <h2 id="categh2Inc"></h2>
-        <i onclick="closShowValueBoxInc()"  type=button id="XiconInc" class="fas fa-times" style='font-size:25px;color:rgb(255, 255, 255)'></i>
-      </div>
-
-      <div id="box-inputInc">
-        <input id="valueinputInc" type = number  placeholder="Value">
-        <div id="currInc" style="display: inline-block;"></div>
-      </div>
-
-      <div id="box-dateInc">
-        <input id="dateinputInc" type = date  placeholder="date">
-      </div>
-
-      <div id="box-noteInc">
-      <input id="noteinputInc" type=string  placeholder="Note">
-      </div>
-
-      <i onclick="addIncomeValue(); addToIncomeList();" id="yesiconInc" class="fas fa-check-square" ></i>
-
-    </div>
+      <div id="pg2header">
 
 
+        <i
+          onclick="sideBarShow()"
+          type="button"
+          class="fas fa-bars"
+          style="font-size: 35px; color: rgb(218, 216, 216)"
+        ></i>
 
+        <h2 id="pg2name"></h2>
 
-
-
-
-
-
-
-
-    <div id = "pg2header">
-
-      <i onclick="sideBarShow()"  type ='button' class="fas fa-bars" style='font-size:35px;color:rgb(218, 216, 216)'></i>
-
-      <h2 id = "pg2name"></h2>
-
-      <div class="budget">
-        <div class="budget__title">
+        <div class="budget">
+          <div class="budget__title">
             Available Budget in <span class="budget__title--month"></span>:
-        </div>
-        
-        <div  id="budget" class="budget__value">0</div>
-        
-        <div class="budget__income clearfix">
+          </div>
+
+          <div id="budget" class="budget__value">0</div>
+
+          <div class="budget__income clearfix">
             <div class="budget__income--text">Income</div>
-            <div id="incomevalue" class="budget__income--value">+ 0</div>  
-        </div>
-        
-        <div class="budget__expenses clearfix">
+            <div id="incomevalue" class="budget__income--value">+ 0</div>
+          </div>
+
+          <div class="budget__expenses clearfix">
             <div class="budget__expenses--text">Expenses</div>
             <div id="expenvalue" class="budget__expenses--value">- 0</div>
+          </div>
         </div>
+      </div>
 
-    </div>
+      <div id="pg2D1"> 
+
+          <div id="pg2income">
+            <div id="sideDiv">
+              <div id="sidebar" style="display: none">
+                <div type="button" onclick="moveToCategory()" id="sidebar1">
+                  Categories
+                </div>
+                <div type="button" onclick="moveToTransction()" id="sidebar2">
+                  Transactions
+                </div>
+              </div>
+            </div>
+
+            <h3 class="pg2h3inc-exp">INCOME</h3>
+
+            <div id="incomeIconOrder">
+              <div class="income-icon">
+                <i
+                  onclick="showValueBoxInc()"
+                  id="Salary"
+                  class="fas fa-wallet"
+                  style="font-size: 35px; text-align: center"
+                ></i>
+                <label id="l-sal" style="display: block; font-weight: bold"
+                  >Salary</label
+                >
+              </div>
+
+              <div class="income-icon">
+                <i
+                  onclick="showValueBoxInc()"
+                  id="Business"
+                  class="fas fa-briefcase"
+                  style="font-size: 35px"
+                ></i>
+                <label id="l-buss" style="display: block; font-weight: bold"
+                  >Business</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div id="pg2expenses">
+            <h3 class="pg2h3inc-exp">EXPENSES</h3>
+
+            <div id="expensesIconOrder">
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Groceries"
+                  class="fas fa-shopping-cart"
+                  style="font-size: 35px; text-align: center"
+                ></i>
+                <label
+                  class="iconText"
+                  style="display: block; font-weight: bold"
+                  >Groceries</label
+                >
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Resturant"
+                  class="fas fa-utensils"
+                  style="font-size: 35px"
+                ></i>
+                <label
+                  id="labRest"
+                  class="iconText"
+                  style="display: block; font-weight: bold"
+                  >Resturant</label
+                >
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Leisure"
+                  class="fas fa-gamepad"
+                  style="font-size: 35px"
+                ></i>
+                <label style="display: block; font-weight: bold">Leisure</label>
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Transport"
+                  class="fas fa-bus-alt"
+                  style="font-size: 35px"
+                ></i>
+                <label
+                  class="iconText"
+                  style="display: block; font-weight: bold"
+                  >Transport</label
+                >
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Gifts"
+                  class="fas fa-gift"
+                  style="font-size: 35px"
+                ></i>
+                <label style="display: block; font-weight: bold">Gifts</label>
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Health"
+                  class="fas fa-heartbeat"
+                  style="font-size: 35px"
+                ></i>
+                <label id="l-heal" style="display: block; font-weight: bold"
+                  >Health</label
+                >
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Family"
+                  class="fas fa-home"
+                  style="font-size: 35px"
+                ></i>
+                <label style="display: block; font-weight: bold">Family</label>
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Utility"
+                  class="fas fa-faucet"
+                  style="font-size: 35px"
+                ></i>
+                <label style="display: block; font-weight: bold">Utility</label>
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Shopping"
+                  class="fas fa-shopping-bag"
+                  style="font-size: 35px"
+                ></i>
+                <label
+                  class="iconText"
+                  style="display: block; font-weight: bold"
+                  >Shopping</label
+                >
+              </div>
+
+              <div class="expenses-icon">
+                <i
+                  onclick="showValueBoxExp()"
+                  id="Mobile"
+                  class="fas fa-mobile-alt"
+                  style="font-size: 35px"
+                ></i>
+                <label
+                  class="iconText"
+                  style="display: block; font-weight: bold"
+                  >Mobile</label
+                >
+              </div>
+            </div>
+          </div>
+        
+      </div>
     
 
+     <div id="pg3" style="display: none;">
+      <div id="pg3income">
+        <h3 class="pg3h3inc-exp">INCOME</h3>
 
-
-    <div id = "pg2D1">
-
-      
-
-
-
-
-      
-
-      <div id = "pg2income">
-
-        <div id='sideDiv'>
-
-        <div id = "sidebar" style="display: none;" >
-          <div type=button onclick="moveToCategory()"  id = "sidebar1">Categories</div>
-          <div type=button onclick="moveToTransction()"     id = "sidebar2">Transactions</div>
+        <div class="listHeader">
+          <div class="pg3listdiv">Category</div>
+          <div class="pg3listdiv">Date</div>
+          <div class="pg3listdiv">Value</div>
+          <div class="pg3listdiv">Note</div>
         </div>
 
-       </div>
-
-        <h3 class="pg2h3inc-exp" >INCOME</h3>
-
-        <div id = "incomeIconOrder">
-
-          <div class="income-icon">
-           <i  onclick="showValueBoxInc()" id = "Salary"  class="fas fa-wallet" style='font-size:35px;text-align:center;'></i>
-           <label id='l-sal' style="display: block;font-weight: bold;">Salary</label>
+        <div class="listInform">
+          <div id="hCategory" class="pg3listIn">
+            <ul id="inluCategory"></ul>
           </div>
 
-          <div class="income-icon">
-            <i  onclick="showValueBoxInc()" id = "Business" class="fas fa-briefcase" style='font-size:35px;'></i>
-            <label id='l-buss' style="display: block;font-weight: bold;" >Business</label>
+          <div id="hDate" class="pg3listIn">
+            <ul id="inluDate"></ul>
           </div>
-
+          <div id="hValue" class="pg3listIn">
+            <ul id="inluValue"></ul>
+          </div>
+          <div id="hNote" class="pg3listIn">
+            <ul id="inluNote"></ul>
+          </div>
         </div>
-
       </div>
 
+      <div id="pg3expenses">
+        <h3 class="pg3h3inc-exp">EXPENSES</h3>
 
-      <div id = "pg2expenses">
-        <h3 class="pg2h3inc-exp" >EXPENSES</h3>
-
-        <div id = "expensesIconOrder">
-
-          <div class="expenses-icon">
-           <i onclick="showValueBoxExp()" id = "Groceries" class="fas fa-shopping-cart" style='font-size:35px;text-align:center;'></i>
-           <label class="iconText" style="display: block;font-weight: bold;">Groceries</label>
-          </div>
-
-          <div  class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Resturant" class="fas fa-utensils" style='font-size:35px;'></i>
-            <label id="labRest" class="iconText"  style="display: block;font-weight: bold;" >Resturant</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Leisure" class="fas fa-gamepad" style='font-size:35px;'></i>
-            <label  style="display: block;font-weight: bold;" >Leisure</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Transport" class="fas fa-bus-alt" style='font-size:35px;'></i>
-            <label class="iconText"  style="display: block;font-weight: bold;" >Transport</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i  onclick="showValueBoxExp()" id = "Gifts" class="fas fa-gift" style='font-size:35px;'></i>
-            <label  style="display: block;font-weight: bold;" >Gifts</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Health" class="fas fa-heartbeat" style='font-size:35px;'></i>
-            <label id="l-heal"  style="display: block;font-weight: bold;" >Health</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Family" class="fas fa-home" style='font-size:35px;'></i>
-            <label  style="display: block;font-weight: bold;" >Family</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Utility" class="fas fa-faucet" style='font-size:35px;'></i>
-            <label  style="display: block;font-weight: bold;" >Utility</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Shopping" class="fas fa-shopping-bag" style='font-size:35px;'></i>
-            <label class="iconText"  style="display: block;font-weight: bold;" >Shopping</label>
-          </div>
-
-          <div class="expenses-icon">
-            <i onclick="showValueBoxExp()" id = "Mobile" class="fas fa-mobile-alt" style='font-size:35px;'></i>
-            <label class="iconText"  style="display: block;font-weight: bold;" >Mobile</label>
-          </div>
-
-
+        <div class="listHeader">
+          <div class="pg3listdiv">Category</div>
+          <div class="pg3listdiv">Date</div>
+          <div class="pg3listdiv">Value</div>
+          <div class="pg3listdiv">Note</div>
         </div>
 
-      </div>
-    </div>
+        <div class="listInform">
+          <div id="ehCategory" class="pg3listIn">
+            <ul id="expluCategory"></ul>
+          </div>
 
+          <div id="ehDate" class="pg3listIn">
+            <ul id="expluDate"></ul>
+          </div>
+          <div id="ehValue" class="pg3listIn">
+            <ul id="expluValue"></ul>
+          </div>
+          <div id="ehNote" class="pg3listIn">
+            <ul id="expluNote"></ul>
+          </div>
+        </div>
+      </div>
     </div>
 
    </div>
-
-
-   <div id = "pg3" style="display: none;" >
-
-    <div id = "pg3income">
-      <h3 class="pg3h3inc-exp" >INCOME</h3>
-
-      <div class = "listHeader">
-        <div class = "pg3listdiv">Category</div>
-        <div class = "pg3listdiv">Date</div>
-        <div class = "pg3listdiv">Value</div>
-        <div class = "pg3listdiv">Note</div>
-      </div>
-
-      <div class = "listInform">
-        <div id="hCategory" class = "pg3listIn">
-          <ul id="inluCategory">
-            
-          </ul>
-
-        </div>
-
-        <div id="hDate" class = "pg3listIn">
-          <ul id="inluDate">
-           
-          </ul>
-        </div>
-        <div id="hValue" class = "pg3listIn">
-          <ul id="inluValue">
-            
-          </ul>
-        </div>
-        <div id="hNote"  class = "pg3listIn">
-          <ul id="inluNote">
-            
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-    <div id = "pg3expenses">
-       <h3 class="pg3h3inc-exp" >EXPENSES</h3>
-
-       
-      <div class = "listHeader">
-        <div class = "pg3listdiv">Category</div>
-        <div class = "pg3listdiv">Date</div>
-        <div class = "pg3listdiv">Value</div>
-        <div class = "pg3listdiv">Note</div>
-      </div>
-
-      <div class = "listInform">
-        <div id="ehCategory" class = "pg3listIn">
-          <ul id="expluCategory">
-            
-          </ul>
-
-        </div>
-
-        <div id="ehDate" class = "pg3listIn">
-          <ul id="expluDate">
-           
-          </ul>
-        </div>
-        <div id="ehValue" class = "pg3listIn">
-          <ul id="expluValue">
-            
-          </ul>
-        </div>
-        <div id="ehNote"  class = "pg3listIn">
-          <ul id="expluNote">
-            
-          </ul>
-        </div>
-      </div>
-
-
-
-
-
-
-
-    </div>
-       
-    
-
-
-
-
-
-
-
-
-
-   </div>
-
-  </div>
-
-
- <script src="./HomePage.js"></script>
- 
-</body>
-
+    <script src="./HomePage.js"></script>
+  </body>
 </html>
-
-
-
