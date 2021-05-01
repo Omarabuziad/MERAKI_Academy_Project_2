@@ -65,26 +65,26 @@ function moveToTransction(){
 
 let expenValue = 0
 function addValue(){ 
-    expenValue = expenValue + Number(document.querySelector("#valueinput").value)
-    document.querySelector('#expenvalue').innerHTML = `- ${expenValue}`
-    document.querySelector('#box-amount').style.display = 'none'
+    expenValue = expenValue + Number($("#valueinput").val())
+    $('#expenvalue').html(`- ${expenValue}`) 
+    $('#box-amount').hide()
     availableBudget()
 }
 
 
 let incomeValue = 0
 function addIncomeValue(){ 
-    incomeValue = incomeValue + Number(document.querySelector("#valueinputInc").value)
-    document.querySelector('#incomevalue').innerHTML = `+ ${incomeValue}`
-    document.querySelector('#box-amountInc').style.display = 'none'
+    incomeValue = incomeValue + Number($("#valueinputInc").val())
+    $('#incomevalue').html(`+ ${incomeValue}`)
+    $('#box-amountInc').hide()
     availableBudget()
 }
+
 
 let availableBudget1 = 0
 function availableBudget(){
     availableBudget1 = incomeValue - expenValue
-    document.querySelector('#budget').innerHTML = availableBudget1
-
+    $('#budget').html(availableBudget1)
 }
 
 
