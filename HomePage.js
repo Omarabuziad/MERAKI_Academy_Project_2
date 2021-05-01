@@ -1,9 +1,28 @@
+function datemain(){
+ now = new Date();
+
+ const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ let month = now.getMonth();
+ let year = now.getFullYear();
+
+ $("#dateSpan").text(months[month] + " " + year)
+
+}
+
+
+
+
+
+
+
+
 function pageOne(){ 
  $('#curr').text($('#bg1sel1').val())
  $('#currInc').text($('#bg1sel1').val())
  $("#pg2name").html($('#inp1').val()+"'s" + ' Wallet')
  $('#pg1').hide()
  $('#pg2').show() 
+ datemain()
 }
 
 
@@ -90,6 +109,10 @@ function availableBudget(){
         alert("Careful from bankrupt , you exceed the limit")
     }
 }
+
+
+
+
 
 
 
