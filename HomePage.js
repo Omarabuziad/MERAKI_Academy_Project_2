@@ -1,24 +1,10 @@
-function pageOne(){
-    
-    $('#curr').text($('#bg1sel1').val())
-    $('#currInc').text($('#bg1sel1').val())
-    document.querySelector("#pg2name").innerHTML = document.querySelector('#inp1').value + ' Wallet'
-    document.querySelector('#pg1').style.display = 'none'
-    document.querySelector('#pg2').style.display = ''
-    
+function pageOne(){ 
+ $('#curr').text($('#bg1sel1').val())
+ $('#currInc').text($('#bg1sel1').val())
+ $("#pg2name").html($('#inp1').val() + ' Waller')
+ $('#pg1').hide()
+ $('#pg2').show() 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -26,36 +12,36 @@ let sideBar = false
 
 function sideBarShow(){
     if(sideBar === false) {
-      document.querySelector('#sidebar').style.display = ''
+      $('#sidebar').show()
       sideBar = true } else {
-        document.querySelector('#sidebar').style.display = 'none'
+        $('#sidebar').hide()
         sideBar = false }  
 }
+
+
 
 let j
 function showValueBoxExp(){
     j = event.target
-    
-    document.querySelector('#categh2').innerHTML = j.id
-    document.querySelector('#box-amount').style.display = ''
-   
-
+    $('#categh2').html(j.id)
+    $('#box-amount').show()
 }
 
+
 function closShowValueBoxExp(){
-    document.querySelector('#box-amount').style.display = 'none'
+    $('#box-amount').hide()
 }
 
 
 let u
 function showValueBoxInc(){
     u = event.target
-    document.querySelector('#categh2Inc').innerHTML = u.id
-    document.querySelector('#box-amountInc').style.display = ''
+    $('#categh2Inc').html(u.id)
+    $('#box-amountInc').show()
 }
 
 function closShowValueBoxInc(){
-    document.querySelector('#box-amountInc').style.display = 'none'
+    $('#box-amountInc').hide()
 }
 
 
@@ -64,14 +50,14 @@ function closShowValueBoxInc(){
 
 
 function moveToCategory(){
-    document.querySelector('#pg3').style.display = 'none'
-    document.querySelector('#pg2D1').style.display = ''
-    document.querySelector('#sidebar').style.display = 'none'
+    $('#pg3').hide()
+    $('#pg2D1').show()
+    $('#sidebar').hide()
 }
 
 function moveToTransction(){
-    document.querySelector('#pg3').style.display = ''
-    document.querySelector('#sidebar').style.display = 'none'
+    $('#pg3').show()
+    $('#sidebar').hide()
    
 }
 
