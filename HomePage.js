@@ -1,11 +1,18 @@
+
+
+
 function datemain(){
  now = new Date();
 
  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
  let month = now.getMonth();
  let year = now.getFullYear();
+ 
 
- $("#dateSpan").text(months[month] + " " + year)
+ localStorage.setItem("lsDatee" , (months[month] + " " + year) )
+
+
+ $("#dateSpan").text(localStorage.getItem("lsDatee"))
 
 }
 
