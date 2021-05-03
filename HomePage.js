@@ -235,44 +235,44 @@ let expCategory = []
 let expDate = []
 let expValue = []
 let expNote = []
-const expulCategory = document.querySelector("#expluCategory")
-const expulDate = document.querySelector("#expluDate")
-const expulValue = document.querySelector("#expluValue")
-const expulNote = document.querySelector("#expluNote")
+const expulCategory = $("#expluCategory")
+const expulDate = $("#expluDate")
+const expulValue = $("#expluValue")
+const expulNote = $("#expluNote")
 
 const renderExpList = function() {
     for (let i = 0; i < expCategory.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = expCategory[i]
+        let li = $("<li></li>")
+        li.text(expCategory[i])
         expulCategory.append(li)
 
-        let cB = document.createElement("button")
-        cB.innerText = 'X'
-        cB.style.display = "inline-block"
-        cB.className = "delbot"
-        cB.onclick = function() { deleteExpInformation(i) };
+        let cB = $("<button></button>")
+        cB.text('X')
+        cB.show("inline-block")
+        cB.addClass("delbot")
+        cB.on("click", ()=> { deleteExpInformation(i) });
         li.append(cB) 
     }
 
 
     for (let i = 0; i < expDate.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = expDate[i]
+        let li = $("<li></li>")
+        li.text(expDate[i])
         expulDate.append(li)
 
     }
 
     for (let i = 0; i < expValue.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = expValue[i]
+        let li = $("<li></li>")
+        li.text(expValue[i])
         expulValue.append(li)
 
         
     }
 
     for (let i = 0; i < expNote.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = expNote[i]
+        let li = $("<li></li>")
+        li.text(expNote[i])
         expulNote.append(li)
 
        
@@ -284,9 +284,9 @@ const addToExpList = function() {
     
 
     let cat = j.id
-    let date = document.querySelector('#dateinput').value
-    let value = document.querySelector('#valueinput').value
-    let note = document.querySelector('#noteinput').value
+    let date = $('#dateinput').val()
+    let value = $('#valueinput').val()
+    let note = $('#noteinput').val()
 
     expCategory.push(cat)
     expDate.push(date)
@@ -295,10 +295,10 @@ const addToExpList = function() {
 
 
     
-    expulCategory.innerHTML = ''
-    expulDate.innerHTML = ''
-   expulValue.innerHTML = ''
-   expulNote.innerHTML = ''
+    expulCategory.html('')
+    expulDate.html('')
+   expulValue.html('')
+   expulNote.html('')
 
    renderExpList()
 
@@ -310,7 +310,7 @@ const deleteExpInformation = function(i) {
     expenValue = expenValue - expValue[i]
 
     
-    document.querySelector('#expenvalue').innerHTML = `- ${expenValue}`
+    $('#expenvalue').html(`- ${expenValue}`)
     availableBudget()
 
 
@@ -319,10 +319,10 @@ const deleteExpInformation = function(i) {
     expValue.splice(i, 1)
     expNote.splice(i, 1)
 
-    expulCategory.innerHTML = ''
-    expulDate.innerHTML = ''
-   expulValue.innerHTML = ''
-   expulNote.innerHTML = ''
+    expulCategory.html('')
+    expulDate.html('')
+   expulValue.html('')
+   expulNote.html('')
 
    
 
