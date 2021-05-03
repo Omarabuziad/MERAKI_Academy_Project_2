@@ -133,22 +133,22 @@ const inCategory = []
 const inDate = []
 const inValue = []
 const inNote = []
-const inulCategory = document.querySelector("#inluCategory")
-const inulDate = document.querySelector("#inluDate")
-const inulValue = document.querySelector("#inluValue")
-const inulNote = document.querySelector("#inluNote")
+const inulCategory = $("#inluCategory")
+const inulDate = $("#inluDate")
+const inulValue = $("#inluValue")
+const inulNote = $("#inluNote")
 
 const renderIncomeList = function() {
     for (let i = 0; i < inCategory.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = inCategory[i]
+        let li = $("<li></li>")
+        li.text(inCategory[i])
         inulCategory.append(li)
 
-        let cB = document.createElement("button")
-        cB.innerText = 'X'
-        cB.style.display = "inline-block"
-        cB.className = "delbot"
-        cB.onclick = function() { deleteIncomeInformation(i) };
+        let cB = $("<button></button>")
+        cB.text('X')
+        cB.show("inline-block")
+        cB.addClass("delbot")
+        cB.on("click", ()=> { deleteIncomeInformation(i) });
         li.append(cB) 
     }
     
@@ -156,22 +156,22 @@ const renderIncomeList = function() {
 
 
     for (let i = 0; i < inDate.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = inDate[i]
+        let li = $("<li></li>")
+        li.text(inDate[i])
         inulDate.append(li)
 
     }
 
     for (let i = 0; i < inValue.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = inValue[i]
+        let li = $("<li></li>")
+        li.text(inValue[i])
         inulValue.append(li)
         
     }
 
     for (let i = 0; i < inNote.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = inNote[i]
+        let li = $("<li></li>")
+        li.text(inNote[i])
         inulNote.append(li)
 
        
@@ -183,9 +183,9 @@ const addToIncomeList = function() {
     
 
     let cat = u.id
-    let date = document.querySelector('#dateinputInc').value
-    let value = document.querySelector('#valueinputInc').value
-    let note = document.querySelector('#noteinputInc').value
+    let date = $('#dateinputInc').val()
+    let value = $('#valueinputInc').val()
+    let note = $('#noteinputInc').val()
 
     inCategory.push(cat)
     inDate.push(date)
@@ -194,10 +194,10 @@ const addToIncomeList = function() {
 
 
     
-    inulCategory.innerHTML = ''
-    inulDate.innerHTML = ''
-   inulValue.innerHTML = ''
-   inulNote.innerHTML = ''
+    inulCategory.html('')
+    inulDate.html('')
+   inulValue.html('')
+   inulNote.html('')
 
    renderIncomeList()
 
@@ -209,7 +209,7 @@ const deleteIncomeInformation = function(i) {
     incomeValue = incomeValue - inValue[i]
 
     
-    document.querySelector('#incomevalue').innerHTML = `+ ${incomeValue}`
+    $('#incomevalue').html(`+ ${incomeValue}`)
     availableBudget()
 
 
@@ -218,10 +218,10 @@ const deleteIncomeInformation = function(i) {
     inValue.splice(i, 1)
     inNote.splice(i, 1)
 
-    inulCategory.innerHTML = ''
-    inulDate.innerHTML = ''
-   inulValue.innerHTML = ''
-   inulNote.innerHTML = ''
+    inulCategory.html('')
+    inulDate.html('')
+   inulValue.html('')
+   inulNote.html('')
 
 
    
