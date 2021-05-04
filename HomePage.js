@@ -23,13 +23,27 @@ function datemain(){
 
 
 
-function pageOne(){ 
+function pageOne(){
+  localStorage.curr = $('#bg1sel1').val()
+  localStorage.displayName = $('#inp1').val()+"'s" + ' Wallet'
+  localStorage.hideMain = "none"
+
  $('#curr').text($('#bg1sel1').val())
  $('#currInc').text($('#bg1sel1').val())
  $("#pg2name").html($('#inp1').val()+"'s" + ' Wallet')
  $('#pg1').hide()
+ localStorage.hide = true
  $('#pg2').show() 
  datemain()
+}
+
+window.onload = function() {
+    const hide = localStorage.getItem("hide")
+    if(hide === 'true') {
+      $("#pg1").show() 
+      
+      
+    }
 }
 
 
