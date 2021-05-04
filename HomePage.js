@@ -169,6 +169,7 @@ if(localStorage.availableBudget){
 
 
 
+
 const inCategory = []
 const inDate = []
 const inValue = []
@@ -221,7 +222,7 @@ const renderIncomeList = function() {
 
 const addToIncomeList = function() {
     
-     
+ 
     let cat = u.id
     let date = $('#dateinputInc').val()
     let value = $('#valueinputInc').val()
@@ -246,11 +247,11 @@ const addToIncomeList = function() {
 
 const deleteIncomeInformation = function(i) {
     
-    incomeValue = incomeValue - inValue[i]
+    localStorage.incomeValue = Number(localStorage.incomeValue) - inValue[i]
 
     
-    $('#incomevalue').html(`+ ${incomeValue}`)
-    availableBudget()
+    $('#incomevalue').html(`+ ${localStorage.getItem("incomeValue")}`)
+    
 
 
     inCategory.splice(i, 1)
@@ -347,11 +348,10 @@ const addToExpList = function() {
 
 const deleteExpInformation = function(i) {
     
-    expenValue = expenValue - expValue[i]
+    localStorage.expenValue = Number(localStorage.expenValue) - expValue[i]
 
     
-    $('#expenvalue').html(`- ${expenValue}`)
-    availableBudget()
+    $('#expenvalue').html(`+ ${localStorage.getItem("expenValue")}`)
 
 
     expCategory.splice(i, 1)
