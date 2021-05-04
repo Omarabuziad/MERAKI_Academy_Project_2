@@ -1,4 +1,7 @@
-
+function homeShow() {
+    $("#pg1").show()
+    $('#pg2').hide() 
+}
 
 
 function datemain(){
@@ -31,20 +34,12 @@ function pageOne(){
  $('#curr').text($('#bg1sel1').val())
  $('#currInc').text($('#bg1sel1').val())
  $("#pg2name").html($('#inp1').val()+"'s" + ' Wallet')
- $('#pg1').hide()
- localStorage.hide = true
+ $("#pg1").hide()
  $('#pg2').show() 
  datemain()
 }
 
-window.onload = function() {
-    const hide = localStorage.getItem("hide")
-    if(hide === 'true') {
-      $("#pg1").show() 
-      
-      
-    }
-}
+
 
 
 
