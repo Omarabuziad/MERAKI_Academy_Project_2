@@ -134,9 +134,12 @@ $('#incomevalue').html(`+ ${localStorage.getItem("incomeValue")}`)}
 
 
 function availableBudget(){
+    if (localStorage.availableBudget) { 
+    localStorage.availableBudget = Number(localStorage.incomeValue) - Number(localStorage.expenValue) 
+    } else {localStorage.availableBudget = 0}
 
-    localStorage.availableBudget = Number(localStorage.incomeValue) - Number(localStorage.expenValue)
     $('#budget').html(Number(localStorage.getItem("availableBudget")))
+
     if(Number(localStorage.getItem("availableBudget")) < 0 ) {
         sound2()
         alert("Careful from bankrupt , you exceed the limits")
@@ -145,6 +148,9 @@ function availableBudget(){
     }
 }
 
+if(localStorage.availableBudget){
+    $('#budget').html(Number(localStorage.getItem("availableBudget"))) }
+    
 
 
 
