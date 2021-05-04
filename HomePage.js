@@ -102,29 +102,42 @@ function moveToTransction(){
 
 
 
-let expenValue = 0
+
 function addValue(){ 
-    expenValue = expenValue + Number($("#valueinput").val())
-    $('#expenvalue').html(`- ${expenValue}`) 
+    if (localStorage.expenValue) { 
+        localStorage.expenValue = Number(localStorage.expenValue)+Number($("#valueinput").val());
+    } else {  localStorage.expenValue = Number($("#valueinput").val())}
+        
+    $('#expenvalue').html(`- ${localStorage.getItem("expenValue")}`) 
     $('#box-amount').hide()
     availableBudget()
 }
+if(localStorage.expenValue){
+$('#expenvalue').html(`- ${localStorage.getItem("expenValue")}`) }
 
 
-let incomeValue = 0
+
+
 function addIncomeValue(){ 
-    incomeValue = incomeValue + Number($("#valueinputInc").val())
-    $('#incomevalue').html(`+ ${incomeValue}`)
+    if (localStorage.incomeValue) { 
+        localStorage.incomeValue = Number(localStorage.incomeValue)+Number($("#valueinputInc").val());
+    } else { localStorage.incomeValue = Number($("#valueinputInc").val())}
+    
+    $('#incomevalue').html(`+ ${localStorage.getItem("incomeValue")}`)
     $('#box-amountInc').hide()
     availableBudget()
 }
 
+if(localStorage.incomeValue){
+$('#incomevalue').html(`+ ${localStorage.getItem("incomeValue")}`)}
 
-let availableBudget1 = 0
+
+
 function availableBudget(){
-    availableBudget1 = incomeValue - expenValue
-    $('#budget').html(availableBudget1)
-    if(availableBudget1 < 0 ) {
+
+    localStorage.availableBudget = Number(localStorage.incomeValue) - Number(localStorage.expenValue)
+    $('#budget').html(Number(localStorage.getItem("availableBudget")))
+    if(Number(localStorage.getItem("availableBudget")) < 0 ) {
         sound2()
         alert("Careful from bankrupt , you exceed the limits")
         setTimeout(function(){ sound3() }, 1750);
