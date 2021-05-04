@@ -1,8 +1,13 @@
-function homeShow() {
+function homeShow(){
     $("#pg1").show()
-    $('#pg2').hide() 
+    $("#pg2").hide()
+    if(localStorage.getItem("hide") === "true"){
+        $("#pg2").show()
+        $("#pg1").hide()
+    }
 }
 
+homeShow()
 
 function datemain(){
  now = new Date();
@@ -13,12 +18,11 @@ function datemain(){
  
 
  localStorage.setItem("lsDatee" , (months[month] + " " + year) )
-
-
  $("#dateSpan").text(localStorage.getItem("lsDatee"))
 
 }
 
+$("#dateSpan").text(localStorage.getItem("lsDatee"))
 
 
 
@@ -27,18 +31,18 @@ function datemain(){
 
 
 function pageOne(){
-  localStorage.curr = $('#bg1sel1').val()
+  localStorage.setItem("curr" , $('#bg1sel1').val())
   localStorage.displayName = $('#inp1').val()+"'s" + ' Wallet'
-  localStorage.hideMain = "none"
 
- $('#curr').text($('#bg1sel1').val())
- $('#currInc').text($('#bg1sel1').val())
- $("#pg2name").html($('#inp1').val()+"'s" + ' Wallet')
  $("#pg1").hide()
  $('#pg2').show() 
  datemain()
+ localStorage.hide = true
 }
 
+$('#curr').text(localStorage.getItem("curr"))
+$('#currInc').text(localStorage.getItem("curr"))
+$("#pg2name").html(localStorage.getItem("displayName"))
 
 
 
