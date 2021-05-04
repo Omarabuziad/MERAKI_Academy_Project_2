@@ -33,6 +33,7 @@ $("#dateSpan").text(localStorage.getItem("lsDatee"))
 function pageOne(){
   localStorage.setItem("curr" , $('#bg1sel1').val())
   localStorage.displayName = $('#inp1').val()+"'s" + ' Wallet'
+  $("#pg2name").html(localStorage.getItem("displayName"))
 
  $("#pg1").hide()
  $('#pg2').show() 
@@ -138,7 +139,7 @@ function availableBudget(){
     localStorage.availableBudget = Number(localStorage.incomeValue) - Number(localStorage.expenValue) 
     } else {localStorage.availableBudget = 0}
 
-    $('#budget').html(Number(localStorage.getItem("availableBudget")))
+    
 
     if(Number(localStorage.getItem("availableBudget")) < 0 ) {
         sound2()
@@ -149,8 +150,8 @@ function availableBudget(){
 }
 
 if(localStorage.availableBudget){
-    $('#budget').html(Number(localStorage.getItem("availableBudget"))) }
-    
+    $('#budget').html(Number(localStorage.getItem("availableBudget"))) 
+} 
 
 
 
@@ -220,7 +221,7 @@ const renderIncomeList = function() {
 
 const addToIncomeList = function() {
     
-
+     
     let cat = u.id
     let date = $('#dateinputInc').val()
     let value = $('#valueinputInc').val()
